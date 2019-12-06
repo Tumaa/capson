@@ -1,0 +1,7 @@
+Hey {{name}}
+Welcome to ChicTech.
+Thank you for joining ChicTech.
+Here you will get oppotunities to venture yourself into tech as an enthusiatic  lady in technology..
+
+Cheers,
+ChicTech Team

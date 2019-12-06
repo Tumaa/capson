@@ -1,0 +1,52 @@
+{% extends "base.html" %} {% import "bootstrap/wtf.html" as wtf%}
+{% import 'macros.html' as macro %}
+{% block styles%} {{super()}}
+<link rel="stylesheet" href="../static/css/image.css">
+{% endblock%}
+{% block content %}
+<div class="container">
+    <div class="row">
+         <div class="col-md-2">
+            <h4>
+                {% if post.user.image %}
+                <p>
+                <img src="{{url_for('static',filename = post.user.image)}}" alt="" class="img-circle">
+                <br> <br>
+                <a href="/user/{{post.user.username}}&{{post.user.id}}">{{post.user.username|capitalize}}</a>
+            </p>
+                {% else %}
+                <p>
+                <img src="{{url_for('static',filename = 'photos/avatar.png')}}" alt="" class="img-circle">
+                <br> <br>
+                <a href="/user/{{post.user.username}}&{{post.user.id}}"><strong>{{post.user.username|capitalize}}</strong></a>
+            </p>
+            {% endif %}
+            </h4>
+         </div>
+         <div class="col-md-5">
+            <h3>{{post.post}}</h3>
+                    <div class="comment-card">
+                        <h4>Reply to {{post.user.username}}</h4>
+                        {{wtf.quick_form(form)}}
+                    </div>
+        </div>
+        <div class="col-md-4" style="overflow:scroll; height: 570px" >
+            {{macro.displayComments(comments)}}
+        </div>
+        </div>
+
+</div>
+    <style>
+    .img-circle{
+    width: 80px;
+    height: 80px;
+     }
+    h3{
+        font-family: 'Amiri', serif;
+    }
+    h4{
+        font-family: 'Cormorant Garamond', serif;
+    }
+    </style>
+
+    {% endblock%}
