@@ -1,4 +1,6 @@
-#!/home/fatuma/mzinge/farm-overflow/virtual/bin/python
+#!/bin/sh
+'''exec' "/home/fatuma/capson tumaa/ChicTech/virtual/bin/python" "$0" "$@"
+' '''
 # -*- coding: utf-8 -*-
 import re
 import sys

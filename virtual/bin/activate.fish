@@ -29,7 +29,7 @@ end
 # unset irrelevant variables
 deactivate nondestructive
 
-set -gx VIRTUAL_ENV "/home/fatuma/mzinge/farm-overflow/virtual"
+set -gx VIRTUAL_ENV "/home/fatuma/capson tumaa/ChicTech/virtual"
 
 set -gx _OLD_VIRTUAL_PATH $PATH
 set -gx PATH "$VIRTUAL_ENV/bin" $PATH
